@@ -1,11 +1,11 @@
 server:
-  port: 8080
+  port: 8081
 spring:
   datasource:
-    url: ${jdbc.url}
-    username: ${jdbc.username}
-    password: ${jdbc.password}
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:h2:/Users/user/hxworkspace/h2/database
+    username: root
+    password: chenhuarong
+    driver-class-name: org.h2.Driver
     type: com.alibaba.druid.pool.DruidDataSource
 #    hikari:
 #      auto-commit: true
@@ -15,10 +15,4 @@ spring:
 #      max-lifetime: 1800000
 #      pool-name: DatebookHikariCP
 #      maximum-pool-size: 5
-#mybatis:
-#  type-aliases-package: com.springboot.springbootmybatisannotation.model
 
-mybatis:
-  type-aliases-package: com.rong.block.mapper
-#  config-location: classpath:mybatis/mybatis-config.xml
-#  mapper-locations: com.rong.block.mapper/*.xml
