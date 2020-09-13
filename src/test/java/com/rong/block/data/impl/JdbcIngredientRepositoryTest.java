@@ -1,5 +1,6 @@
 package com.rong.block.data.impl;
 
+import com.rong.block.data.IngredientRepository;
 import com.rong.block.pojo.Ingredient;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class JdbcIngredientRepositoryTest {
 
     @Autowired
-    private JdbcIngredientRepository jdbcIngredientRepository;
+    private IngredientRepository jdbcIngredientRepository;
 
     @Test
     void findAll() {
@@ -24,7 +25,7 @@ class JdbcIngredientRepositoryTest {
 
     @Test
     void findOne() {
-        System.out.println(jdbcIngredientRepository.findOne("FLTO").toString());
+        System.out.println(jdbcIngredientRepository.findById("FLTO").toString());
     }
 
     @Test

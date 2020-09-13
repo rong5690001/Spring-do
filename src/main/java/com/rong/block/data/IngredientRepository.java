@@ -1,13 +1,12 @@
 package com.rong.block.data;
 
 import com.rong.block.pojo.Ingredient;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
-public interface IngredientRepository {
+@Repository
+public interface IngredientRepository extends CrudRepository<Ingredient, String> {
 
-    Iterable<Ingredient> findAll();
 
-    Ingredient findOne(String id);
-
-    Ingredient save(Ingredient ingredient);
 
 }
